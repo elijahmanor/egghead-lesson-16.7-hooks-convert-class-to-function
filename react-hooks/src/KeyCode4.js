@@ -8,7 +8,7 @@ const useDocumentKeyCode = () => {
       setCodes({ keyCode, key, code });
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
-  });
+  }, []);
   return codes;
 };
 
